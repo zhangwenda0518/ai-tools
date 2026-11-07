@@ -1,0 +1,16 @@
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Build / package artifacts
+*.zip
+dist/
+node_modules/
+__pycache__/
+*.pyc

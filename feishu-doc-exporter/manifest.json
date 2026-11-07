@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "飞书文档导出助手 · 图片表格批量选择导出",
+  "short_name": "飞书导出助手",
+  "version": "0.1.0",
+  "description": "在飞书文档中批量勾选并导出图片（原图）与表格（CSV），打包成一个 ZIP。",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["downloads", "storage"],
+  "host_permissions": [
+    "https://*.feishu.cn/*",
+    "https://*.larksuite.com/*",
+    "https://*.feishu.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.feishu.cn/docx/*",
+        "https://*.feishu.cn/wiki/*",
+        "https://*.feishu.cn/base/*",
+        "https://*.feishu.cn/docs/*",
+        "https://*.larksuite.com/docx/*",
+        "https://*.larksuite.com/wiki/*",
+        "https://*.larksuite.com/base/*",
+        "https://*.larksuite.com/docs/*",
+        "https://*.feishu.net/docx/*",
+        "https://*.feishu.net/wiki/*",
+        "https://*.feishu.net/base/*"
+      ],
+      "js": ["src/zip.js", "src/scan.js", "src/panel.js"],
+      "css": ["src/panel.css"],
+      "all_frames": true,
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "飞书文档导出助手",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  }
+}

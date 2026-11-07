@@ -1,0 +1,253 @@
+/* All rules are scoped under .fxe-root and use !important against host styles. */
+.fxe-root {
+  position: fixed !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  z-index: 2147483600 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif !important;
+  color: #1f2329 !important;
+}
+
+.fxe-root * {
+  box-sizing: border-box !important;
+}
+
+.fxe-fab {
+  position: absolute !important;
+  right: 22px !important;
+  bottom: 84px !important;
+  width: 56px !important;
+  height: 56px !important;
+  border-radius: 50% !important;
+  border: none !important;
+  background: linear-gradient(135deg, #3370ff, #1f5aeb) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  box-shadow: 0 6px 20px rgba(51, 112, 255, 0.35) !important;
+  transition: transform 0.15s ease !important;
+  outline: none !important;
+}
+.fxe-fab:hover { transform: scale(1.06) !important; }
+.fxe-fab.fxe-hidden { display: none !important; }
+
+.fxe-panel {
+  position: absolute !important;
+  right: 20px !important;
+  bottom: 20px !important;
+  width: 440px !important;
+  max-width: calc(100vw - 40px) !important;
+  height: 78vh !important;
+  max-height: 780px !important;
+  display: none !important;
+  flex-direction: column !important;
+  background: #fff !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 48px rgba(31, 35, 41, 0.22) !important;
+  pointer-events: auto !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(31, 35, 41, 0.08) !important;
+}
+.fxe-panel.fxe-open { display: flex !important; }
+
+.fxe-head {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+  padding: 12px 14px !important;
+  border-bottom: 1px solid #eff0f1 !important;
+}
+.fxe-title {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+.fxe-x {
+  border: none !important;
+  background: transparent !important;
+  font-size: 20px !important;
+  line-height: 1 !important;
+  color: #8f959e !important;
+  cursor: pointer !important;
+  padding: 0 4px !important;
+}
+.fxe-x:hover { color: #1f2329 !important; }
+
+.fxe-bar {
+  display: flex !important;
+  gap: 8px !important;
+  padding: 10px 14px 6px !important;
+}
+
+.fxe-btn {
+  border: 1px solid #dee0e3 !important;
+  background: #fff !important;
+  color: #1f2329 !important;
+  font-size: 12px !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.fxe-btn:hover { border-color: #3370ff !important; color: #3370ff !important; }
+.fxe-btn:disabled { opacity: 0.45 !important; cursor: not-allowed !important; }
+.fxe-btn-primary {
+  background: #3370ff !important;
+  border-color: #3370ff !important;
+  color: #fff !important;
+}
+.fxe-btn-primary:hover { background: #1f5aeb !important; color: #fff !important; }
+.fxe-btn-primary:disabled { background: #a9c2ff !important; border-color: #a9c2ff !important; }
+
+.fxe-status {
+  padding: 4px 14px 8px !important;
+  font-size: 12px !important;
+  color: #646a73 !important;
+  line-height: 1.5 !important;
+}
+
+.fxe-prog {
+  height: 3px !important;
+  background: #eff0f1 !important;
+  margin: 0 14px 10px !important;
+  border-radius: 2px !important;
+  overflow: hidden !important;
+}
+.fxe-prog-fill {
+  height: 100% !important;
+  width: 0% !important;
+  background: #3370ff !important;
+  transition: width 0.2s ease !important;
+}
+
+.fxe-body {
+  flex: 1 1 auto !important;
+  overflow-y: auto !important;
+  padding: 0 14px 12px !important;
+}
+.fxe-body::-webkit-scrollbar { width: 8px !important; }
+.fxe-body::-webkit-scrollbar-thumb { background: #dee0e3 !important; border-radius: 4px !important; }
+
+.fxe-section { margin-bottom: 14px !important; }
+.fxe-sec-title {
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: #646a73 !important;
+  margin: 6px 0 8px !important;
+}
+
+.fxe-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 8px !important;
+}
+
+.fxe-card {
+  position: relative !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  background: #f5f6f7 !important;
+  border: 2px solid transparent !important;
+  cursor: pointer !important;
+  aspect-ratio: 4 / 3 !important;
+}
+.fxe-card.fxe-sel { border-color: #3370ff !important; }
+.fxe-thumb {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+.fxe-num {
+  position: absolute !important;
+  left: 4px !important;
+  bottom: 4px !important;
+  background: rgba(0, 0, 0, 0.55) !important;
+  color: #fff !important;
+  font-size: 10px !important;
+  padding: 1px 5px !important;
+  border-radius: 4px !important;
+}
+.fxe-check {
+  position: absolute !important;
+  top: 5px !important;
+  right: 5px !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-radius: 50% !important;
+  border: 1.5px solid #fff !important;
+  background: rgba(0, 0, 0, 0.28) !important;
+}
+.fxe-sel > .fxe-check,
+.fxe-trow.fxe-sel .fxe-check {
+  background: #3370ff !important;
+  border-color: #3370ff !important;
+}
+.fxe-sel > .fxe-check::after,
+.fxe-trow.fxe-sel .fxe-check::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 4px !important;
+  top: 1px !important;
+  width: 4px !important;
+  height: 8px !important;
+  border: solid #fff !important;
+  border-width: 0 1.5px 1.5px 0 !important;
+  transform: rotate(45deg) !important;
+}
+
+.fxe-trow {
+  display: flex !important;
+  gap: 10px !important;
+  align-items: flex-start !important;
+  padding: 8px !important;
+  border: 1px solid #eff0f1 !important;
+  border-radius: 8px !important;
+  margin-bottom: 6px !important;
+  cursor: pointer !important;
+  background: #fff !important;
+}
+.fxe-trow.fxe-sel { border-color: #3370ff !important; background: #f5f8ff !important; }
+.fxe-trow.fxe-disabled { opacity: 0.6 !important; cursor: default !important; }
+.fxe-trow .fxe-check {
+  position: relative !important;
+  top: auto !important;
+  right: auto !important;
+  flex: 0 0 auto !important;
+  border: 1.5px solid #c3c6cb !important;
+  background: #fff !important;
+  margin-top: 2px !important;
+}
+.fxe-tinfo {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+.fxe-tinfo b { font-size: 12px !important; font-weight: 600 !important; }
+.fxe-meta { font-size: 11px !important; color: #8f959e !important; }
+.fxe-prev {
+  font-size: 11px !important;
+  color: #646a73 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  margin-top: 2px !important;
+}
+
+.fxe-foot {
+  border-top: 1px solid #eff0f1 !important;
+  padding: 10px 14px 12px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+}
+.fxe-export { width: 100% !important; padding: 9px 12px !important; font-size: 13px !important; }
+.fxe-hint { font-size: 11px !important; color: #8f959e !important; text-align: center !important; }
